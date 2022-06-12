@@ -1,4 +1,8 @@
 #include<stdio.h>
+
+// Function declaration
+void swap(int*, int*);
+
 int main()
 {
     // Define variables and assign values
@@ -76,6 +80,30 @@ int main()
     printf("---------------------------------------------------------------\n\n");
 
 
+    // Assign values
+    a = 10, b = 5;
+    
+    printf("-----------------------** Method: 5 **--------------------------\n");
+    printf("Swapping of Two Numbers Using User-Defined Function :\n");
+    
+    printf("Before swapping: a = %d, b = %d\n", a, b);
+    
+    // Call function
+    swap(&a, &b); 
+ 
+    printf("After swapping: a = %d, b = %d\n", a, b);
+    printf("---------------------------------------------------------------\n\n");
+
+
 
     return 0;
+}
+
+// Function definition
+void swap(int *ptr1, int *ptr2) {
+    int temp;
+    
+    temp = *ptr2;   // a = 10, b = 5
+    *ptr2 = *ptr1;  // a = 10, b = 10
+    *ptr1 = temp;   // a = 5, b = 10
 }
