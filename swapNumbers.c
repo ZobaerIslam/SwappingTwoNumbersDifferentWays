@@ -52,6 +52,30 @@ int main()
     printf("---------------------------------------------------------------\n\n");
 
 
+    // Assign values
+    a = 10, b = 5;
+
+    // Define Pointer 
+    int *ptr1, *ptr2;
+    
+    printf("-----------------------** Method: 4 **--------------------------\n");
+    printf("Swapping of Two Numbers Using Pointer :\n");
+    
+    printf("Before swapping: a = %d, b = %d\n", a, b);
+    
+    // Point to the variable (a and b) Address
+    ptr1 = &a;
+    ptr2 = &b;
+
+    // Swap a and b:
+    temp = *ptr2;   // a = 10, b = 5
+    *ptr2 = *ptr1;   // a = 10, b = 10
+    *ptr1 = temp;   // a = 5, b = 10
+ 
+    printf("After swapping: a = %d, b = %d\n", a, b);
+    printf("---------------------------------------------------------------\n\n");
+
+
 
     return 0;
 }
