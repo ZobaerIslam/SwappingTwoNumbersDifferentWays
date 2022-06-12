@@ -34,8 +34,24 @@ int main()
     printf("After swapping: a = %d, b = %d\n", a, b);
     printf("---------------------------------------------------------------\n\n");
 
- 
+
+    // Assign values
+    a = 10, b = 5;
     
+    printf("-----------------------** Method: 3 **--------------------------\n");
+    printf("Swapping of Two Numbers Using Bit-wise XOR(^) Operator :\n");
+    
+    printf("Before swapping: a = %d, b = %d\n", a, b);
+    
+    // Swap a and b:
+    a = a ^ b;  // (0000 1010)^(0001 0100) = 0001 1110 // a = 15, b = 5
+    b = a ^ b;  // (0001 1110)^(0001 0100) = 0000 1010 // a = 15, b = 10
+    a = a ^ b;  // (0001 1110)^(0000 1010) = 0001 0100 // a = 5, b = 10
+ 
+    printf("After swapping: a = %d, b = %d\n", a, b);
+    printf("---------------------------------------------------------------\n\n");
+
+
 
     return 0;
 }
